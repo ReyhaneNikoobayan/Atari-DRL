@@ -47,7 +47,7 @@ Advantage at time t:
 
 A(t) = Return(t) − Value(s_t)
 
-# The return is computed using bootstrapping:
+### The return is computed using bootstrapping:
 
 Return(t) = Reward(t) + γ × Return(t+1)
 
