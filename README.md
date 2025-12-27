@@ -179,3 +179,27 @@ The trained model is saved after training:
 checkpoints/a2c_pong.pth
 
 ```
+
+## Training Results
+
+### Episodic Reward
+![Episodic Reward](<img width="1694" height="908" alt="image" src="https://github.com/user-attachments/assets/c2f5bd59-bf7b-40d2-87ef-d3d81a9d952c" />)
+
+### Actor Loss
+![Actor Loss](assets/actor_loss.png)
+
+### Critic Loss
+![Critic Loss](assets/critic_loss.png)
+
+---
+
+## Test Gameplay
+
+The trained agent is evaluated in the test environment.  
+Here is an example episode:
+
+![Pong Gameplay](assets/a2c_pong_test.gif)
+
+Videos are also saved as MP4 in `videos/`:
+
+
