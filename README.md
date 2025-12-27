@@ -206,10 +206,15 @@ This folder contains six gameplay videos recorded during testing. You can downlo
 
 
 Episode 1: Reward = 21.0
+
 Episode 2: Reward = 19.0
+
 Episode 3: Reward = 21.0
+
 Episode 4: Reward = 21.0
+
 Episode 5: Reward = 19.0
+
 Episode 6: Reward = 20.0
 
 
