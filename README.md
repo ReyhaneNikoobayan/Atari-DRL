@@ -91,8 +91,6 @@ Four consecutive preprocessed frames are stacked to capture temporal information
 
 ---
 
-## Network Architecture
-
 The agent uses **separate convolutional networks** for the actor and critic.
 
 ### Convolutional Encoder (Actor & Critic)
