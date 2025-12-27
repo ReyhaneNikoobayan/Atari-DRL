@@ -202,7 +202,7 @@ checkpoints/a2c_pong.pth
 The trained agent is evaluated in the test environment.  
 Here is an example episode:
 
-[Link Text](https://example.com)
+[episode 1](https://github.com/ReyhaneNikoobayan/Atari-DRL/blob/main/test/a2c_pong_test-episode-0.mp4)
 
 
 
