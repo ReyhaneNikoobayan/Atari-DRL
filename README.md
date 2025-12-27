@@ -18,7 +18,8 @@ This project implements a **from-scratch Advantage Actor–Critic (A2C)** reinfo
 
 ---
 *source code*
- A2C-pong
+[A2C-pong](https://github.com/ReyhaneNikoobayan/Atari-DRL/blob/main/A2C-pong.ipynb)
+
 ---
 The agent learns directly from pixel inputs through convolutional neural networks and is optimized using policy-gradient methods. All components — environment vectorization, preprocessing, optimization, evaluation, and video recording — are implemented manually using **PyTorch** and **Gymnasium**, without relying on high-level RL training frameworks.
 
