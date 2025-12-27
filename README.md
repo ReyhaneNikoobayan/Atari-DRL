@@ -104,27 +104,93 @@ Four consecutive preprocessed frames are stacked to capture temporal information
 
 ---
 
-### Actor Network
+## Network Architecture
 
-Conv2D: 32 filters, kernel=8, stride=4
-ReLU
-Conv2D: 32 filters, kernel=4, stride=2
-ReLU
-Conv2D: 32 filters, kernel=4, stride=2
-ReLU
-Conv2D: 64 filters, kernel=4, stride=1
-ReLU
-Fully Connected: 256
-ReLU
-Fully Connected: Number of actions (policy logits)
+The agent uses **separate convolutional networks** for the actor and critic.
 
+### Convolutional Encoder (Actor & Critic)
+
+- 4 convolutional layers
+- ReLU activations
+- Strided convolutions for spatial downsampling
+
+### Fully Connected Layers
+
+- Hidden layer: 256 units
+- **Actor output:** action logits
+- **Critic output:** scalar state-value estimate
+
+The convolution output size is computed dynamically using a dummy forward pass.
 
 ---
 
-### Critic Network
+## Training Setup
 
-Conv2D: identical convolutional backbone
-Fully Connected: 256
-ReLU
-Fully Connected: 1 (state value)
+- **Number of environments:** 8
+- **Updates:** 15,000
+- **Steps per update:** 128
+- **Discount factor (γ):** 0.95
+- **Actor learning rate:** 1e-4
+- **Critic learning rate:** 1e-5
+- **Entropy coefficient:** 0.01
+- **Optimizer:** RMSprop
+- **Device:** CPU / CUDA (if available)
 
+---
+
+## Training Process
+
+During training, the agent:
+1. Collects rollouts from parallel environments
+2. Computes discounted returns
+3. Calculates advantages
+4. Updates actor and critic networks
+5. Logs losses and episodic rewards
+
+### Metrics Tracked
+
+- Actor loss
+- Critic loss
+- Episodic reward
+- Moving averages of training metrics
+
+### Training Curves
+
+The following plots are generated during training:
+- Actor loss (moving average)
+- Critic loss (moving average)
+- Episodic reward (moving average over 50 episodes)
+
+These plots help monitor learning stability and performance improvement over time.
+
+---
+
+## Evaluation / Testing
+
+After training, the agent is evaluated in a separate environment with:
+- Exploration disabled
+- Greedy action selection (`argmax` over policy logits)
+- Video recording enabled
+
+### Test Setup
+
+- **Test episodes:** 6
+- **Render mode:** RGB frames
+- **Frame stacking:** 4 frames
+- **Videos saved to:** `videos/`
+
+### Test Results
+
+Each test episode prints the total episodic reward.  
+The trained agent demonstrates stable Pong gameplay, consistently returning the ball and outperforming a random policy.
+
+---
+
+## Saving and Loading Models
+
+The trained model is saved after training:
+
+```bash
+checkpoints/a2c_pong.pth
+
+```
