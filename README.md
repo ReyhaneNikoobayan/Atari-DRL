@@ -185,6 +185,7 @@ The trained A2C agent is saved as a PyTorch checkpoint containing both the actor
 Saving Format:
 
 torch.save({
+
     "actor_conv": actor_conv.state_dict(),
     
     "actor_fc": actor_fc.state_dict(),
