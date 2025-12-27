@@ -180,6 +180,22 @@ checkpoints/a2c_pong.pth
 
 ```
 
+The trained A2C agent is saved as a PyTorch checkpoint containing both the actor and critic networks, along with their corresponding optimizers.
+
+Saving Format:
+
+torch.save({
+    "actor_conv": actor_conv.state_dict(),
+    "actor_fc": actor_fc.state_dict(),
+    "critic_conv": critic_conv.state_dict(),
+    "critic_fc": critic_fc.state_dict(),
+    "actor_optim": actor_optim.state_dict(),
+    "critic_optim": critic_optim.state_dict(),
+}, path)
+
+[trained model](test)
+
+
 ## Training Results
 
 ### Episodic Reward
@@ -193,6 +209,7 @@ checkpoints/a2c_pong.pth
 ### Critic Loss
 
 <img width="1696" height="776" alt="image" src="https://github.com/user-attachments/assets/fbae26a8-5168-4298-ba96-0d1392f403aa" />
+
 
 
 ---
