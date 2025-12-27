@@ -202,7 +202,7 @@ checkpoints/a2c_pong.pth
 The trained agent is evaluated in the test environment.
 This folder contains six gameplay videos recorded during testing. You can download and view them directly from the links below.
 
-[episode 1](https://github.com/ReyhaneNikoobayan/Atari-DRL/blob/main/test/a2c_pong_test-episode-0.mp4)
+[episode 1](test)
 
 
 Episode 1: Reward = 21.0
