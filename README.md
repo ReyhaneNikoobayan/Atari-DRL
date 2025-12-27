@@ -88,3 +88,43 @@ The critic is trained to regress the predicted value toward the observed return:
 Critic Loss =
 0.5 × (Return(t) − Value(s_t))² 
 
+
+---
+
+## 🏗️ Network Architecture
+
+Separate convolutional neural networks are used for the actor and critic.
+
+### Input Representation
+
+Observation shape: (Height=65, Width=84, Channels=4)
+
+
+Four consecutive preprocessed frames are stacked to capture temporal information.
+
+---
+
+### Actor Network
+
+Conv2D: 32 filters, kernel=8, stride=4
+ReLU
+Conv2D: 32 filters, kernel=4, stride=2
+ReLU
+Conv2D: 32 filters, kernel=4, stride=2
+ReLU
+Conv2D: 64 filters, kernel=4, stride=1
+ReLU
+Fully Connected: 256
+ReLU
+Fully Connected: Number of actions (policy logits)
+
+
+---
+
+### Critic Network
+
+Conv2D: identical convolutional backbone
+Fully Connected: 256
+ReLU
+Fully Connected: 1 (state value)
+
