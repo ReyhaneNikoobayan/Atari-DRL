@@ -208,6 +208,8 @@ Saving Format:
 
 ## Training Results
 
+**The relatively high magnitude of the actor loss is expected, as it is computed using a sum over time steps rather than a mean. As a result, the loss value scales with episode length, leading to larger numerical values compared to formulations that use averaging.**
+
 ### Episodic Reward
 
 <img width="1694" height="908" alt="image" src="https://github.com/user-attachments/assets/8b6bc785-6ec5-4b5a-9991-4bb2fcd7fb2e" />
