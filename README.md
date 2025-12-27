@@ -203,7 +203,7 @@ Saving Format:
     
     "critic_optim": critic_optim.state_dict(),}, path)
 
-[trained model](A2C-pong-model)
+**[trained model](A2C-pong-model)**
 
 
 ## Training Results
@@ -229,7 +229,7 @@ Saving Format:
 The trained agent is evaluated in the test environment.
 This folder contains six gameplay videos recorded during testing. You can download and view them directly from the links below.
 
-[test videos](test)
+**[test videos](test)**
 
 
 Episode 1: Reward = 21.0
