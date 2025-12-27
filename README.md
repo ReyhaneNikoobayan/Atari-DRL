@@ -20,19 +20,6 @@ The agent learns directly from pixel inputs through convolutional neural network
 
 ---
 
-## 🎯 Project Motivation
-
-This project was developed to gain a deep, practical understanding of:
-
-- Actor–critic reinforcement learning algorithms
-- Policy-gradient optimization with value-function baselines
-- End-to-end visual learning using convolutional networks
-- Parallel environment training for improved sample efficiency
-
-Atari Pong serves as a controlled benchmark for studying learning dynamics in visual reinforcement learning.
-
----
-
 ## 🧠 Algorithm: Advantage Actor–Critic (A2C)
 
 Advantage Actor–Critic (A2C) is a **synchronous actor–critic algorithm** that learns a policy and a value function simultaneously.
