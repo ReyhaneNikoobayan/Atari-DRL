@@ -208,7 +208,9 @@ Saving Format:
 
 ## Training Results
 
-**The relatively high magnitude of the actor loss is expected, as it is computed using a sum over time steps rather than a mean. As a result, the loss value scales with episode length, leading to larger numerical values compared to formulations that use averaging.**
+The relatively high magnitude of the **actor loss** is expected, as it is computed using a sum over time steps rather than a mean. As a result, the loss value scales with episode length, leading to larger numerical values compared to formulations that use averaging.
+
+In contrast, the **critic loss** is computed using the mean squared error, which normalizes the loss across time steps. As a result, the critic loss remains at a reasonable and stable magnitude, making the difference in scale between the two losses expected and not indicative of training instability.
 
 ### Episodic Reward
 
