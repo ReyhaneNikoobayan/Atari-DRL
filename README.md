@@ -186,11 +186,17 @@ Saving Format:
 
 torch.save({
     "actor_conv": actor_conv.state_dict(),
+    
     "actor_fc": actor_fc.state_dict(),
+    
     "critic_conv": critic_conv.state_dict(),
+    
     "critic_fc": critic_fc.state_dict(),
+    
     "actor_optim": actor_optim.state_dict(),
+    
     "critic_optim": critic_optim.state_dict(),
+    
 }, path)
 
 [trained model](A2C-pong-model)
