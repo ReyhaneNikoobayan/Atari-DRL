@@ -193,7 +193,7 @@ torch.save({
     "critic_optim": critic_optim.state_dict(),
 }, path)
 
-[trained model](test)
+[trained model](A2C-pong-model)
 
 
 ## Training Results
