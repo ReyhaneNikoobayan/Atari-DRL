@@ -184,9 +184,7 @@ The trained A2C agent is saved as a PyTorch checkpoint containing both the actor
 
 Saving Format:
 
-torch.save({
-
-    "actor_conv": actor_conv.state_dict(),
+     torch.save({"actor_conv": actor_conv.state_dict(),
     
     "actor_fc": actor_fc.state_dict(),
     
@@ -196,9 +194,7 @@ torch.save({
     
     "actor_optim": actor_optim.state_dict(),
     
-    "critic_optim": critic_optim.state_dict(),
-    
-}, path)
+    "critic_optim": critic_optim.state_dict(),}, path)
 
 [trained model](A2C-pong-model)
 
